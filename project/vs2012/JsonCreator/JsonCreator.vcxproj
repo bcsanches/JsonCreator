@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -16,6 +16,7 @@
     <ClInclude Include="..\..\..\include\JsonCreator\Defs.h" />
     <ClInclude Include="..\..\..\include\JsonCreator\Object.h" />
     <ClInclude Include="..\..\..\include\JsonCreator\StringWriter.h" />
+    <ClInclude Include="..\..\..\include\JsonCreator\StringWriterFwd.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{AF571A90-2DC4-411B-A691-301A9E865615}</ProjectGuid>

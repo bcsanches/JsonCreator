@@ -25,9 +25,14 @@ namespace JsonCreator
 	class BaseStringWriter
 	{
 		public:
-			const char *GetString()
+			const char *GetString() const
 			{
 				return m_clStream.GetString();
+			}
+
+			size_t GetSize() const
+			{
+				return m_clStream.Size();
 			}
 
 		protected:
@@ -55,6 +60,7 @@ namespace JsonCreator
 
 		public:
 			using BaseStringWriter::GetString;
+			using BaseStringWriter::GetSize;
 
 			StringWriter& StartObject()
 			{
@@ -84,7 +90,7 @@ namespace JsonCreator
 				return *this;
 			}
 
-			StringWriter& String(const char *str, std::size_t length, bool copy = false) 
+			StringWriter& String(const char *str, const std::size_t length, const bool copy = false) 
 			{
 				m_clWriter.String(str, length, copy);
 

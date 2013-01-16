@@ -7,10 +7,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\JsonCreator\Object.h" />
-    <ClInclude Include="..\..\include\JsonCreator\StringWriter.h" />
-    <ClInclude Include="..\..\include\JsonCreator\Defs.h" />
-    <ClInclude Include="..\..\include\JsonCreator\Array.h" />
-    <ClInclude Include="..\..\include\JsonCreator\BaseValue.h" />
+    <ClInclude Include="..\..\..\include\JsonCreator\Array.h" />
+    <ClInclude Include="..\..\..\include\JsonCreator\BaseValue.h" />
+    <ClInclude Include="..\..\..\include\JsonCreator\Defs.h" />
+    <ClInclude Include="..\..\..\include\JsonCreator\Object.h" />
+    <ClInclude Include="..\..\..\include\JsonCreator\StringWriter.h" />
+    <ClInclude Include="..\..\..\include\JsonCreator\StringWriterFwd.h" />
   </ItemGroup>
 </Project>
