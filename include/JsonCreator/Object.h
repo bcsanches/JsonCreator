@@ -51,6 +51,13 @@ namespace JsonCreator
 				this->GetWriter()->String(value);
 			}
 
+			void AddIntValue(const char *name, int value)
+			{
+				this->StartAttribute(name);
+
+				this->GetWriter()->Int(value);
+			}
+
 			Object AddObject(const char *name)
 			{
 				this->StartAttribute(name);

@@ -29,6 +29,9 @@ subject to the following restrictions:
 #endif
 
 #if defined ASSERT_THROW
+
+	#include <stdexcept>
+
 	namespace JsonCreator
 	{
 		class AssertException: std::runtime_error
