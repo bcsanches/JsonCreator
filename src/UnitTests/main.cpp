@@ -51,6 +51,8 @@ BOOST_AUTO_TEST_CASE(NestedObject)
 			address.AddStringValue("street", "Blah");
 			address.AddStringValue("city", "Mordor");
 			address.AddIntValue("number", 353);
+			address.AddBool("valid", true);
+			address.AddBool("home", false);
 		}
 
 		obj.AddStringValue("age", "2");
@@ -58,7 +60,7 @@ BOOST_AUTO_TEST_CASE(NestedObject)
 		obj.AddObject("empty");
 	}
 
-	BOOST_CHECK(strcmp(writer.GetString(), "{\"name\":\"bcs\",\"address\":{\"street\":\"Blah\",\"city\":\"Mordor\",\"number\":353},\"age\":\"2\",\"empty\":{}}") == 0);
+	BOOST_CHECK(strcmp(writer.GetString(), "{\"name\":\"bcs\",\"address\":{\"street\":\"Blah\",\"city\":\"Mordor\",\"number\":353,\"valid\":true,\"home\":false},\"age\":\"2\",\"empty\":{}}") == 0);
 }
 
 BOOST_AUTO_TEST_CASE(ObjectWithArray)

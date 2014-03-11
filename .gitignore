@@ -6,3 +6,7 @@ project/vs2012/JsonCreator/Release/
 project/vs2012/UnitTests/Release/
 project/vs2012/UnitTests/UnitTests.vcxproj.user
 project/vs2012/JsonCreator.v11.suo
+project/vs2013/Debug/
+project/vs2013/JsonCreator/Debug/
+project/vs2013/UnitTests/Debug/
+project/vs2013/UnitTests/UnitTests.vcxproj.user

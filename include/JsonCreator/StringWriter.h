@@ -111,6 +111,13 @@ namespace JsonCreator
 				return *this;
 			}
 
+			StringWriter &Bool(bool value)
+			{
+				m_clWriter.Bool(value);
+
+				return *this;
+			}
+
 		private:
 			rapidjson::Writer<rapidjson::StringBuffer> m_clWriter;
 	};
