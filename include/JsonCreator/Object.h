@@ -44,35 +44,35 @@ namespace JsonCreator
 					this->GetWriter()->EndObject();
 			}
 
-			void AddStringValue(const char *name, const char *value)
+			void AddStringValue(std::string_view name, std::string_view value)
 			{
 				this->StartAttribute(name);
 
 				this->GetWriter()->String(value);
-			}
+			}			
 
-			void AddIntValue(const char *name, int value)
+			void AddIntValue(std::string_view name, int value)
 			{
 				this->StartAttribute(name);
 
 				this->GetWriter()->Int(value);
 			}
 
-			void AddBool(const char *name, bool value)
+			void AddBool(std::string_view name, bool value)
 			{
 				this->StartAttribute(name);
 
 				this->GetWriter()->Bool(value);
 			}
 
-			Object AddObject(const char *name)
+			Object AddObject(std::string_view name)
 			{
 				this->StartAttribute(name);
 
 				return Object(static_cast<BaseValue &>(*this));
 			}
 
-			Array<T> AddArray(const char *name)
+			Array<T> AddArray(std::string_view name)
 			{
 				this->StartAttribute(name);
 
@@ -80,7 +80,7 @@ namespace JsonCreator
 			}
 
 		private:
-			void StartAttribute(const char *name)
+			void StartAttribute(std::string_view name)
 			{
 				#ifdef JSON_CREATOR_DEBUG
 					JC_ASSERT(!this->HasChildren(), "Unable to add item, finalize child first");

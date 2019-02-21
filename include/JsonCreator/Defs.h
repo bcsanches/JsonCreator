@@ -45,7 +45,8 @@ subject to the following restrictions:
 		};
 	}
 
-	#define JC_ASSERT(EXP, MSG) { if(!(EXP)) throw AssertException(MSG); }
+	//#define JC_ASSERT(EXP, MSG) { if(!(EXP)) throw AssertException(MSG); }
+	#define JC_ASSERT(EXP, MSG) { assert(EXP); }
 #endif
 
 #endif

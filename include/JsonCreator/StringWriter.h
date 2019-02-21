@@ -32,7 +32,7 @@ namespace JsonCreator
 
 			size_t GetSize() const
 			{
-				return m_clStream.Size();
+				return m_clStream.GetSize();
 			}
 
 		protected:
@@ -97,11 +97,9 @@ namespace JsonCreator
 				return *this;
 			}
 
-			StringWriter &String(const char *str)
+			StringWriter &String(std::string_view str)
 			{
-				m_clWriter.String(str);
-
-				return *this;
+				return this->String(str.data() , str.length());
 			}
 
 			StringWriter &Int(int value)
