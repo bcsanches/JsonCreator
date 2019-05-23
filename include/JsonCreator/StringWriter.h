@@ -90,7 +90,7 @@ namespace JsonCreator
 				return *this;
 			}
 
-			StringWriter& String(const char *str, const std::size_t length, const bool copy = false) 
+			StringWriter& String(const char *str, const rapidjson::SizeType length, const bool copy = false)
 			{
 				m_clWriter.String(str, length, copy);
 
@@ -99,7 +99,7 @@ namespace JsonCreator
 
 			StringWriter &String(std::string_view str)
 			{
-				return this->String(str.data() , str.length());
+				return this->String(str.data() , static_cast<rapidjson::SizeType>(str.length()));
 			}
 
 			StringWriter &Int(int value)
