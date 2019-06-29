@@ -44,7 +44,7 @@ namespace JsonCreator
 #endif
 				m_pclWriter(rhs.m_pclWriter)
 			{
-				writer.m_pclWriter = nullptr;
+				rhs.m_pclWriter = nullptr;
 			}
 
 			BaseValue(BaseValue &parent, NonCopyConstructorTag /*unused*/):

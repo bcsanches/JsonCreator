@@ -24,6 +24,11 @@ subject to the following restrictions:
 
 		#define ASSERT_THROW
 	#endif
+#elif defined __linux__
+	#if !defined NDEBUG
+		#define JSON_CREATOR_DEBUG
+		#define ASSERT_THROW
+	#endif
 #else
 	#error "Unknown compiler, please report"
 #endif

@@ -27,13 +27,13 @@ namespace JsonCreator
 	{
 		public:
 			Object(T &writer):
-				BaseValue(writer)
+				BaseValue<T>(writer)
 			{
 				this->GetWriter()->StartObject();
 			}
 
-			Object(Object &&rhs):
-				BaseValue(rhs)
+			Object(Object<T> &&rhs):
+				BaseValue<T>(rhs)
 			{
 				//empty
 			}
@@ -65,18 +65,18 @@ namespace JsonCreator
 				this->GetWriter()->Bool(value);
 			}
 
-			Object AddObject(std::string_view name)
+			Object<T> AddObject(std::string_view name)
 			{
 				this->StartAttribute(name);
 
-				return Object(static_cast<BaseValue &>(*this));
+				return Object<T>(static_cast<BaseValue<T> &>(*this));
 			}
 
 			Array<T> AddArray(std::string_view name)
 			{
 				this->StartAttribute(name);
 
-				return Array<T>(static_cast<BaseValue &>(*this));
+				return Array<T>(static_cast<BaseValue<T> &>(*this));
 			}
 
 		private:
@@ -93,8 +93,8 @@ namespace JsonCreator
 			Object(const Object &rhs);
 			Object operator=(const Object &rhs);
 
-			Object(BaseValue &parent):
-				BaseValue(parent, BaseValue::NonCopyConstructorTag())
+			Object(BaseValue<T> &parent):
+				BaseValue<T>(parent, BaseValue<T>::NonCopyConstructorTag())
 			{				
 				this->GetWriter()->StartObject();				
 			}
