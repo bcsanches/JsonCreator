@@ -94,7 +94,7 @@ namespace JsonCreator
 			Object operator=(const Object &rhs);
 
 			Object(BaseValue<T> &parent):
-				BaseValue<T>(parent, BaseValue<T>::NonCopyConstructorTag())
+				BaseValue<T>(parent, typename BaseValue<T>::NonCopyConstructorTag{})
 			{				
 				this->GetWriter()->StartObject();				
 			}

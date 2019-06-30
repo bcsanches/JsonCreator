@@ -53,7 +53,7 @@ namespace JsonCreator
 			friend Object<T>;
 
 			Array(BaseValue<T> &parent):
-				BaseValue<T>(parent, BaseValue<T>::NonCopyConstructorTag())
+				BaseValue<T>(parent, typename BaseValue<T>::NonCopyConstructorTag{})
 			{
 				this->GetWriter()->StartArray();
 			}

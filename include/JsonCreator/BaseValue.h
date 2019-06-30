@@ -47,7 +47,7 @@ namespace JsonCreator
 				rhs.m_pclWriter = nullptr;
 			}
 
-			BaseValue(BaseValue &parent, NonCopyConstructorTag /*unused*/):
+			BaseValue(BaseValue &parent, const NonCopyConstructorTag /*unused*/):
 #ifdef JSON_CREATOR_DEBUG
 				m_szChildCount(0),
 				m_pclParent(&parent),
