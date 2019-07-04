@@ -107,6 +107,6 @@ namespace JsonCreator
 	{
 		return Object<T>(writer);
 	}
-}
+} // end of namespace JsonCreator
 
 #endif

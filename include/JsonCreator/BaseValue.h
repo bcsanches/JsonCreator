@@ -98,6 +98,6 @@ namespace JsonCreator
 			BaseValue *m_pclParent;
 #endif
 	};
-}
+} // end of namespace JsonCreator
 
 #endif

@@ -25,6 +25,9 @@ namespace JsonCreator
 	class BaseStringWriter
 	{
 		public:
+			BaseStringWriter(const BaseStringWriter& rhs) = delete;
+			BaseStringWriter operator=(const BaseStringWriter& rhs) = delete;
+
 			const char *GetString() const
 			{
 				return m_clStream.GetString();
@@ -36,14 +39,7 @@ namespace JsonCreator
 			}
 
 		protected:
-			BaseStringWriter()
-			{
-				//empty
-			}
-
-		private:
-			BaseStringWriter(const BaseStringWriter &rhs);
-			BaseStringWriter operator=(const BaseStringWriter &rhs);
+			BaseStringWriter() = default;			
 
 		protected:
 			rapidjson::StringBuffer m_clStream;
@@ -119,6 +115,6 @@ namespace JsonCreator
 		private:
 			rapidjson::Writer<rapidjson::StringBuffer> m_clWriter;
 	};
-}
+} // end of namespace JsonCreator
 
 #endif

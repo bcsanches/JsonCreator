@@ -64,6 +64,6 @@ namespace JsonCreator
 	{
 		return Array<T>(writer);
 	}
-}
+} //end namespace JsonCreator
 
 #endif
