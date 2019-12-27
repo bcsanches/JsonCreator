@@ -22,18 +22,18 @@ subject to the following restrictions:
 	#if defined _DEBUG
 		#define JSON_CREATOR_DEBUG
 
-		#define ASSERT_THROW
+		#define JSON_CREATOR_ASSERT_THROW
 	#endif
 #elif defined __linux__
 	#if !defined NDEBUG
 		#define JSON_CREATOR_DEBUG
-		#define ASSERT_THROW
+		#define JSON_CREATOR_ASSERT_THROW
 	#endif
 #else
 	#error "Unknown compiler, please report"
 #endif
 
-#if defined ASSERT_THROW
+#if defined JSON_CREATOR_ASSERT_THROW
 
 	#include <stdexcept>
 
