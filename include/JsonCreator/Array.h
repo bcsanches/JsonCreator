@@ -49,6 +49,11 @@ namespace JsonCreator
 				return Object<T>(*this);
 			}
 
+			void AddNull()
+			{
+				this->GetWriter()->Null();
+			}
+
 		private:					
 			friend Object<T>;
 
