@@ -43,6 +43,11 @@ namespace JsonCreator
 			{
 				this->GetWriter()->String(str);
 			}
+
+			void AddBool(const bool v)
+			{
+				this->GetWriter()->Bool(v);
+			}
 			
 			Object<T> AddObject()
 			{
