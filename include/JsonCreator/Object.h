@@ -17,6 +17,8 @@ subject to the following restrictions:
 #ifndef JSON_CREATOR_OBJECT_H
 #define JSON_CREATOR_OBJECT_H
 
+#include <string_view>
+
 #include "JsonCreator/BaseValue.h"
 #include "JsonCreator/Array.h"
 
