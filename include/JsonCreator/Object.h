@@ -60,6 +60,13 @@ namespace JsonCreator
 				this->GetWriter()->Int(value);
 			}
 
+			void AddPointerValue(std::string_view name, const void *value)
+			{
+				this->StartAttribute(name);
+
+				this->GetWriter()->Pointer(value);
+			}
+
 			void AddBool(std::string_view name, bool value)
 			{
 				this->StartAttribute(name);

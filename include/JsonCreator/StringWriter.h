@@ -105,6 +105,13 @@ namespace JsonCreator
 				return *this;
 			}
 
+			StringWriter &Pointer(const void *value)
+			{
+				m_clWriter.Uint64(reinterpret_cast<intptr_t>(value));
+
+				return *this;
+			}
+
 			StringWriter &Bool(bool value)
 			{
 				m_clWriter.Bool(value);
