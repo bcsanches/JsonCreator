@@ -44,6 +44,11 @@ namespace JsonCreator
 				this->GetWriter()->String(str);
 			}
 
+			void AddString(std::string_view view)
+			{
+				this->GetWriter()->String(view);
+			}
+
 			void AddBool(const bool v)
 			{
 				this->GetWriter()->Bool(v);
