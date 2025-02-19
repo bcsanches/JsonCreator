@@ -29,30 +29,36 @@ namespace JsonCreator
 
 			BaseValue(T &writer):
 #ifdef JSON_CREATOR_DEBUG
+				m_pclWriter(&writer),
 				m_szChildCount(0),
-				m_pclParent(nullptr),
-#endif
+				m_pclParent(nullptr)
+#else
 				m_pclWriter(&writer)
+#endif
 			{
 				//empty
 			}
 
 			BaseValue(BaseValue &&rhs):
 #ifdef JSON_CREATOR_DEBUG
+				m_pclWriter(rhs.m_pclWriter),
 				m_szChildCount(rhs.m_szChildCount),
-				m_pclParent(rhs.m_pclParent),
-#endif
+				m_pclParent(rhs.m_pclParent)
+#else
 				m_pclWriter(rhs.m_pclWriter)
+#endif
 			{
 				rhs.m_pclWriter = nullptr;
 			}
 
 			BaseValue(BaseValue &parent, const NonCopyConstructorTag /*unused*/):
 #ifdef JSON_CREATOR_DEBUG
+				m_pclWriter(parent.m_pclWriter),
 				m_szChildCount(0),
-				m_pclParent(&parent),
-#endif
+				m_pclParent(&parent)
+#else
 				m_pclWriter(parent.m_pclWriter)
+#endif
 			{				
 				#ifdef JSON_CREATOR_DEBUG
 					m_pclParent->m_szChildCount++;
