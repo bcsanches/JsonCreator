@@ -74,6 +74,13 @@ namespace JsonCreator
 				this->GetWriter()->Bool(value);
 			}
 
+			void AddFloatValue(std::string_view name, float value)
+			{
+				this->StartAttribute(name);
+
+				this->GetWriter()->Float(value);
+			}
+
 			Object<T> AddObject(std::string_view name)
 			{
 				this->StartAttribute(name);

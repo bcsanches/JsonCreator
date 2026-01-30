@@ -105,6 +105,13 @@ namespace JsonCreator
 				return *this;
 			}
 
+			StringWriter &Float(float value)
+			{
+				m_clWriter.Double(value);
+
+				return *this;
+			}
+
 			StringWriter &Pointer(const void *value)
 			{
 				m_clWriter.Uint64(reinterpret_cast<intptr_t>(value));
