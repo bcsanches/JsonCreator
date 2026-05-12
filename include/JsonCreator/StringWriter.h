@@ -105,6 +105,13 @@ namespace JsonCreator
 				return *this;
 			}
 
+			StringWriter &Int64(int64_t value)
+			{
+				m_clWriter.Int64(value);
+
+				return *this;
+			}
+
 			StringWriter &Float(float value)
 			{
 				m_clWriter.Double(value);
