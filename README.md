@@ -14,7 +14,7 @@ Also it tries to make the generation as fast as possible, no object tree is crea
 
 You can also provide your own "Writer" class that writes the JSON direct to a socket or file.
 
-###Usage###
+## Usage ##
 
 Example:
 
@@ -61,7 +61,7 @@ int main(int, char **)
 
 Notice that scope is used to control object start / finish. The same applies for arrays. Also the library will assert or throw an exception (macro controlled) if you make a mistake. 
 
-###Compiling###
+## Compiling ##
 
 Right now the library is header only. Just copy the folder include/JsonCreator to your compiler include folder or configure it for seeing it and you are ready go.
 
@@ -69,16 +69,16 @@ Compiling is only required if you want to build and run test cases, in this case
 
 A Visual Studio Express 2012 project is provided. 
 
-###Disclaimer###
+## Disclaimer ##
 
-This is not a JSON parser, if you need a JSON parser, we recomend rapidjson: http://code.google.com/p/rapidjson/
+This is not a JSON parser, if you need a JSON parser, we suggest rapidjson: http://code.google.com/p/rapidjson/
 
-###Roadmap###
+## Roadmap ##
 
 * Direct support for numbers
 * More native writers support
 
-###License###
+## License ##
 
 JsonCreator
 May 2013
